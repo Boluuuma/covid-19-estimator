@@ -32,8 +32,8 @@ function covid19ImpactEstimator($data)
   $newArray['severeImpact'] ['infectionsByRequestedTime'] = $newArray['severeImpact'] ['currentlyInfected'] * converter($data['periodType'], $data['timeToElapse']);
   $newArray['impact'] ['severeCasesByRequestedTime'] = floor($newArray['impact'] ['infectionsByRequestedTime'] * 0.15);
   $newArray['severeImpact'] ['severeCasesByRequestedTime'] = floor($newArray['severeImpact'] ['infectionsByRequestedTime'] * 0.15);
-  $newArray['impact'] ['hospitalBedsByRequestedTime'] = floor($data['totalHospitalBeds'] * 0.35);
-  $newArray['severeImpact'] ['hospitalBedsByRequestedTime'] = floor($data['totalHospitalBeds'] * 0.35);
+  $newArray['impact'] ['hospitalBedsByRequestedTime'] = floor($data['totalHospitalBeds'] * 0.35) - $newArray['impact'] ['severeCasesByRequestedTime'] ;
+  $newArray['severeImpact'] ['hospitalBedsByRequestedTime'] = floor($data['totalHospitalBeds'] * 0.35) - $newArray['severeImpact'] ['severeCasesByRequestedTime'] ;
   $newArray['impact'] ['casesForICUByRequestedTime'] = floor($newArray['impact'] ['infectionsByRequestedTime'] * 0.05);
   $newArray['severeImpact'] ['casesForICUByRequestedTime'] = floor($newArray['severeImpact'] ['infectionsByRequestedTime'] * 0.05);
   $newArray['impact'] ['casesForVentilatorsByRequestedTime'] = floor($newArray['impact'] ['infectionsByRequestedTime'] * 0.02);
