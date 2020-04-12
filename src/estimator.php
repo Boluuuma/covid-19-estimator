@@ -17,7 +17,7 @@ function converter($period_type, $time_to_elapse)
       $y = floor($time_to_elapse /3);
       break;
   }
-  return 2^$y;
+  return pow(2, $y);
 }
 
 function covid19ImpactEstimator($data)
