@@ -38,8 +38,8 @@ function covid19ImpactEstimator($data)
   $newArray['severeImpact'] ['casesForICUByRequestedTime'] = floor($newArray['severeImpact'] ['infectionsByRequestedTime'] * 0.05);
   $newArray['impact'] ['casesForVentilatorsByRequestedTime'] = floor($newArray['impact'] ['infectionsByRequestedTime'] * 0.02);
   $newArray['severeImpact'] ['casesForVentilatorsByRequestedTime'] = floor($newArray['severeImpact'] ['infectionsByRequestedTime'] * 0.02);
-  $newArray['impact'] ['dollarsInFlight'] = floor($newArray['impact'] ['infectionsByRequestedTime'] * $data['region'] ['avgDailyIncomePopulation'] * $data['region'] ['avgDailyIncomeInUsd'] * $data['timeToElapse']);
-  $newArray['severeImpact'] ['dollarsInFlight'] = floor($newArray['severeImpact'] ['infectionsByRequestedTime'] * $data['region'] ['avgDailyIncomePopulation'] * $data['region'] ['avgDailyIncomeInUsd'] * $data['timeToElapse']);
+  $newArray['impact'] ['dollarsInFlight'] = floor($newArray['impact'] ['infectionsByRequestedTime'] * $data['region'] ['avgDailyIncomePopulation'] * $data['region'] ['avgDailyIncomeInUSD'] * $data['timeToElapse']);
+  $newArray['severeImpact'] ['dollarsInFlight'] = floor($newArray['severeImpact'] ['infectionsByRequestedTime'] * $data['region'] ['avgDailyIncomePopulation'] * $data['region'] ['avgDailyIncomeInUSD'] * $data['timeToElapse']);
 
   $data = $newArray;
 

@@ -56,7 +56,7 @@ try{
     $data['region'] = array(
       "name" => $name,
       "avgAge" => $avg_age,
-      "avgDailyIncomeInUsd" => $avg_daily_income_in_usd,
+      "avgDailyIncomeInUSD" => $avg_daily_income_in_usd,
       "avgDailyIncomePopulation" => $avg_daily_income_population,
     );
     $data['periodType'] = $period_type;
